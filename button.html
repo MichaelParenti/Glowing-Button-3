@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body{
+  margin:0px;
+}
+.all{
+  background-color:black;
+  margin:0px;
+  min-width:100vw;
+  min-height:100vw;
+}
+#btn{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  border-radius: 50%;
+  border:none;
+  width:100px;
+  height:100px;
+  outline:none;
+  background:radial-gradient(black,grey);
+  box-shadow:none;
+}
+#center{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  border-radius: 50%;
+  border:none;
+  width:10px;
+  height:10px;
+  outline:none;
+  background:black;
+  box-shadow:0 0 20px 5px black;
+}
+#btn-background{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  border-radius: 50%;
+  border:none;
+  width:100px;
+  height:100px;
+  outline:none;
+  background:#ff0000;
+  box-shadow:0 0 0 10px #101010;
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div id="btn-background"></div>
+        <button id="btn" onclick="on();">0</button>
+        <div id="center"></div>
+      </div>
+
+      
+      <script>
+
+          var btn = document.querySelector("#btn");
+          var center = document.querySelector("#center");
+
+  function on(){
+    if(center.style.background === 'black'){
+        btn.style.boxShadow = '0 0 30px 5px #ff0000';
+        center.style.background = '#ff0000';
+        center.style.boxShadow = '0 0 10px 5px #ff0000';
+    } else {
+        btn.style.boxShadow = 'none';
+        center.style.background = 'black';
+        center.style.boxShadow = '0 0 20px 5px black';  
+    }
+  
+}
+
+      </script>
+</body>
+</html>
